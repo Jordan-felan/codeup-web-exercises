@@ -47,7 +47,7 @@
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
- */
+//  */
 // switch (randomColor) {
 //     case "blue":
 //         console.log("Blue is the color of the sky!");
@@ -121,11 +121,12 @@
  * price before the discount was, and what their price after the discount is.
  */
 
-// // Generate a random number between 0 and 6
+// Generate a random number between 0 and 6
 // var luckyNumberRandom = Math.floor(Math.random() * 6);
 // var totalAmount = parseFloat(prompt("What is the total of your bill?"));
-//  console.log("Your lucky number is " + luckyNumberRandom + "!");
-// console.log(calculateTotal(luckyNumberRandom,totalAmount));
+//  alert("Your lucky number is " + luckyNumberRandom + "!");
+//  alert("Your bill total before discount is " + totalAmount)
+// alert(calculateTotal(luckyNumberRandom,totalAmount));
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -144,30 +145,62 @@
  */
 
 
-var numberEntered;var confirm = confirm("Would you like to enter a number? Press okay for yes and press cancel for no.");
-if (confirm === true) {
-        numberEntered = parseFloat(prompt("Please enter a number!"));
-} else {
-        alert("Well thanks anyways!");
-}
-if (isNaN(numberEntered)) {
-        alert("Value entered was not a number. Please try again!")
-} else {
-      
-        if (numberEntered % 2 === 1 || numberEntered % 2 === -1) {
-            alert(numberEntered + " is odd!");
-        } else {
-            alert(numberEntered + " is Even!");
-        }
-        var plusHundred = numberEntered + 100
-        alert("Your number plus 100 is " + plusHundred + "!")
+// var numberEntered;
+// var confirm = confirm("Would you like to enter a number? Press okay for yes and press cancel for no.");
+// if (confirm === true) {
+//         numberEntered = parseFloat(prompt("Please enter a number!"))
+//     if (isNaN(numberEntered)) {
+//         alert("Value entered was not a number. Please try again!")
+//     } else {
+//
+//         if (numberEntered % 2 === 1 || numberEntered % 2 === -1) {
+//             alert(numberEntered + " is odd!");
+//         } else {
+//             alert(numberEntered + " is Even!");
+//         }
+//         if (numberEntered > 0 ) {
+//             alert("Your number is positive.")
+//         } else {
+//             alert("Your number is negative.")
+//         }
+//         var plusHundred = numberEntered + 100
+//         alert("Your number plus 100 is " + plusHundred + "!");
+//
+//         console.log(numberEntered);
+//         console.log(plusHundred);
+//     }
+//
+// } else {
+//         alert("Well thanks anyways!");
+// }
+var participate = confirm("Would you like to enter a number?")
+var numberEntry
 
-        console.log(numberEntered);
-        console.log(plusHundred)
+function isOddOrEven(numberEntry) {
+    return (numberEntry % 2 === 0) ? "This number is even." : "This number is odd."
+}
+
+function isNegativeOrPositive(numberEntry) {
+    return (numberEntry > 0) ? "This number is positive." : "This number is negative."
+}
+
+function plus100 (numberEntry) {
+    return "Your number is " + (parseFloat(numberEntry) + 100) + " if we added 100."
+}
+
+if (participate) {
+    numberEntry = prompt("Please enter a number.")
+    if (isNaN(numberEntry)){
+        alert("Sorry what ypu entered was not a number")
+    } else {
+        alert(isOddOrEven(numberEntry))
+        alert(isNegativeOrPositive(numberEntry))
+        alert(plus100(numberEntry))
     }
 
-
-
+} else {
+    alert("Well Goodbye then!")
+}
 
 
 
