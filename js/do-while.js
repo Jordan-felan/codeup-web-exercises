@@ -1,3 +1,5 @@
+'use strict';
+
 //
 // The output should be similar to the following:
 //

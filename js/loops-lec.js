@@ -1,3 +1,5 @@
+'use strict';
+
 // While Loops
 
 // Pizza Loop
@@ -55,15 +57,36 @@
 // counter = counter - 1
 // }
 
+
+//Do While Loop
+
 // Guessing Game
-var number = Math.floor(Math.random() * 6) +1;
-var guess;
+// var number = Math.floor(Math.random() * 6) +1;
+// var guess;
+//
+// do {
+//     guess = parseInt(prompt("Enter a number between 1 and 6"));
+// } while (guess !== number);
+//
+// alert("Your guess of " + guess + " matches the number " + number + "!");
 
-do {
-    guess = parseInt(prompt("Enter a number between 1 and 6"));
-} while (guess !== number);
 
-alert("Your guess of " + guess + " matches the number " + number + "!");
+//For Loops
+
+// var count = 0;
+// while (count <= 100) {
+//     console.log(count);
+//     count = count + 1;
+//
+// }
 
 
+for (count = 0; count <= 100; count = count + 1){
+    console.log(count);
+}
+
+// short hand of one above
+for (i = 0; i <= 100; i++) {
+    console.log(i)
+}
 
