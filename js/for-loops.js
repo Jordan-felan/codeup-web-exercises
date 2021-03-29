@@ -36,7 +36,7 @@
 // var randomNumber = Math.floor(Math.random() * 180) + 20;
 // var count
 // for(count = 0; count <= 10; count = count + 1){
-//     var randomNumber = Math.floor(Math.random() * 180) + 20;
+//     var randomNumber = Math.floor(Math.random() * 181) + 20;
 //     if(randomNumber % 2 == 0) {
 //         console.log(randomNumber + " is Even")
 //     } else {
@@ -47,14 +47,20 @@
 
 
 
-var line
-var j
 
-for (line = 1; line <= 9; line++) {
-    for (j = 1; j <= line; j++) {
-            console.log(line);
+var output = ""
+
+for (var line = 1; line <= 9; line++) {
+    for (var j = 1; j <= line; j++) {
+        if (line === j){
+            output += j + "";
+        } else {
+            output += line + "";
         }
-        console.log("\n")
+
+        }
+        console.log(output);
+    output = "";
 }
 
 // var count
