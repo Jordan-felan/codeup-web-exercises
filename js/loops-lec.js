@@ -78,15 +78,15 @@
 //     console.log(count);
 //     count = count + 1;
 //
-// }
-
+//
+var count
 
 for (count = 0; count <= 100; count = count + 1){
     console.log(count);
-}
 
-// short hand of one above
-for (i = 0; i <= 100; i++) {
-    console.log(i)
+
+// // short hand of one above
+// for (i = 0; i <= 100; i++) {
+//     console.log(i)
 }
 
