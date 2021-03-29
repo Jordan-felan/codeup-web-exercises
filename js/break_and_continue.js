@@ -7,7 +7,7 @@ var userInput;
 
 while (true) {
     userInput = parseInt(prompt("Enter an odd number between 1 and 50."));
-    if (userInput % 2 !== 0 && userInput < 50) {
+    if (userInput % 2 !== 0 && userInput < 50 && userInput >= 1) {
         console.log("Number to skip is: " + userInput);
         break;
     }
