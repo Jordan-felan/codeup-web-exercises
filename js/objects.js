@@ -26,16 +26,16 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-    var person = {
-        firstName: "Jordan",
-        lastName: "Felan",
-        sayHello: function(){
-            console.log("Hello from " + this.firstName + " " + this.lastName);
-        }
-    };
-    console.log(person.firstName);
-    console.log(person.lastName);
-    console.log(person.sayHello())
+   //  var person = {
+   //      firstName: "Jordan",
+   //      lastName: "Felan",
+   //      sayHello: function(){
+   //          console.log("Hello from " + this.firstName + " " + this.lastName);
+   //      }
+   //  };
+   //  console.log(person.firstName);
+   //  console.log(person.lastName);
+   // console.log(person.sayHello())
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -50,11 +50,27 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+
+    shoppers.forEach(function(shopper) {
+
+       ;
+        var discount = .12;
+        if(shopper.amount >= 200){
+            console.log(shopper.name + " has a total of $" + shopper.amount + ", which makes them eligible for a 12% discount which brings there new total of $" + (shopper.amount - (shopper.amount * discount)))
+
+        } else {
+            console.log(shopper.name + " has a total of $" + shopper.amount + " they are not eligible for a discount so there total is $" + shopper.amount)
+
+        }
+
+
+    });
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -68,6 +84,19 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [
+        {bookNum:"1", title: "City of Bones", author: {firstName: "Cassandra", lastName: "Claire"}},
+        {bookNum:"2", title: "City of Ashes", author: {firstName: "Cassandra", lastName: "Claire"}},
+        {bookNum:"3", title: "City of Glass", author: {firstName: "Cassandra", lastName: "Claire"}},
+        {bookNum:"4", title: "City of Fallen Angels", author: {firstName: "Cassandra", lastName: "Claire"}},
+        {bookNum:"5", title: "City of Lost Souls", author: {firstName: "Cassandra", lastName: "Claire"}},
+        {bookNum:"6", title: "City of Heavenly Fire", author: {firstName: "Cassandra", lastName: "Claire"}}
+
+    ];
+    // console.log(books[1].title);
+    // console.log(books[1].author.firstName);
+    // console.log(books[1].author.lastName);
 
     /**
      * TODO:
@@ -93,6 +122,13 @@
      *      ---
      *      ...
      */
+
+    books.forEach(function(book) {
+        console.log("Book # " + book.bookNum)
+        console.log("Title: " + book.title)
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName)
+
+    })
 
     /**
      * Bonus:
