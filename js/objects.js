@@ -50,27 +50,27 @@
      * and console.log the relevant messages for each person
      */
 
-    var shoppers = [
-        {name: 'Cameron', amount: 180},
-        {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
-    ];
-
-
-    shoppers.forEach(function(shopper) {
-
-       ;
-        var discount = .12;
-        if(shopper.amount >= 200){
-            console.log(shopper.name + " has a total of $" + shopper.amount + ", which makes them eligible for a 12% discount which brings there new total of $" + (shopper.amount - (shopper.amount * discount)))
-
-        } else {
-            console.log(shopper.name + " has a total of $" + shopper.amount + " they are not eligible for a discount so there total is $" + shopper.amount)
-
-        }
-
-
-    });
+    // var shoppers = [
+    //     {name: 'Cameron', amount: 180},
+    //     {name: 'Ryan', amount: 250},
+    //     {name: 'George', amount: 320}
+    // ];
+    //
+    //
+    // shoppers.forEach(function(shopper) {
+    //
+    //    ;
+    //     var discount = .12;
+    //     if(shopper.amount >= 200){
+    //         console.log(shopper.name + " has a total of $" + shopper.amount + ", which makes them eligible for a 12% discount which brings there new total of $" + (shopper.amount - (shopper.amount * discount)))
+    //
+    //     } else {
+    //         console.log(shopper.name + " has a total of $" + shopper.amount + " they are not eligible for a discount so there total is $" + shopper.amount)
+    //
+    //     }
+    //
+    //
+    // });
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -86,12 +86,12 @@
      */
 
     var books = [
-        {bookNum:"1", title: "City of Bones", author: {firstName: "Cassandra", lastName: "Claire"}},
-        {bookNum:"2", title: "City of Ashes", author: {firstName: "Cassandra", lastName: "Claire"}},
-        {bookNum:"3", title: "City of Glass", author: {firstName: "Cassandra", lastName: "Claire"}},
-        {bookNum:"4", title: "City of Fallen Angels", author: {firstName: "Cassandra", lastName: "Claire"}},
-        {bookNum:"5", title: "City of Lost Souls", author: {firstName: "Cassandra", lastName: "Claire"}},
-        {bookNum:"6", title: "City of Heavenly Fire", author: {firstName: "Cassandra", lastName: "Claire"}}
+        {title: "City of Bones", author: {firstName: "Cassandra", lastName: "Claire"}},
+        {title: "City of Ashes", author: {firstName: "Cassandra", lastName: "Claire"}},
+        {title: "City of Glass", author: {firstName: "Cassandra", lastName: "Claire"}},
+        {title: "City of Fallen Angels", author: {firstName: "Cassandra", lastName: "Claire"}},
+        {title: "City of Lost Souls", author: {firstName: "Cassandra", lastName: "Claire"}},
+        {title: "City of Heavenly Fire", author: {firstName: "Cassandra", lastName: "Claire"}}
 
     ];
     // console.log(books[1].title);
@@ -123,12 +123,13 @@
      *      ...
      */
 
-    books.forEach(function(book) {
-        console.log("Book # " + book.bookNum)
-        console.log("Title: " + book.title)
-        console.log("Author: " + book.author.firstName + " " + book.author.lastName)
-
-    })
+    // books.forEach(function(book,index) {
+    //     var bookNumber = index + 1
+    //     console.log("Book # " + bookNumber)
+    //     console.log("Title: " + book.title)
+    //     console.log("Author: " + book.author.firstName + " " + book.author.lastName)
+    //
+    // })
 
     /**
      * Bonus:
@@ -140,5 +141,37 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+    // function Book (title, author) {
+    //     this.title = title;
+    //     this.author = author;
+    //     this.getDetails = function () {
+    //         return this.title + " written by " + this.author;
+    //     };
+    // }
+    // var book = new Book("City of Bones", "Cassandra Claire");
+    // var bookOne = new Book("City of Glass", "Cassandra Claire");
+    //
+    // console.log(book.title);
+    // console.log(book.author);
+    // console.log(bookOne.title);
+    // console.log(bookOne.author);
+    //
+    //
+    // function createBook(title, authorFirst, authorLast) {
+    //     books.push({
+    //         title: title,
+    //         author: {
+    //             firstName: authorFirst,
+    //             lastName: authorLast
+    //         }
+    //     });
+    // }
+    function showBookInfo(book) {
+        return "Title: " + book.title + "\n" + book.author.firstName + " " + book.author.lastName;
+    }
+
+    books.forEach(function(book, index) {
+        console.log("Book # " +(index + 1) + "\n" + showBookInfo(book));
+    });
 
 })();
