@@ -56,20 +56,7 @@ console.log(names.length)
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
-    function first (input) {
-        return input[0]
-    }
-    console.log(first(names))
 
-    function second (input) {
-        return input[1]
-    }
-    console.log(second(names))
-
-    function last (input) {
-        return input[names.length - 1]
-    }
-    console.log(last(names))
 
 
 }) ();
