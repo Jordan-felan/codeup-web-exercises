@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register With Us</title>
+</head>
+<body>
+<header>
+        <h1>Register With Us</h1>
+</header>
+<main>
+        <section>
+        <form method="POST" action="https://request-inspector.glitch.me/">
+
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="text" placeholder="Enter Email here">
+            <br>
+
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="Enter Password here">
+            <br>
+            <br>
+        </section>
+        <section>
+            <label for="body-text">Bio</label><br>
+            <textarea id="body-text" name="text-body" cols="30" rows="10" placeholder="Tell me about yourself..."></textarea>
+            <br> <br>
+        </section>
+        <section>
+            <h3>How did you hear about us?</h3>
+
+            <input type="radio" name="how_heard_1" id="choice-a" value="billboard">
+            <label for="choice-a">Billboard</label>
+            <br>
+           <input type="radio" name="how_heard_2" id="choice-b" value="radio-advertisement">
+            <label for="choice-b"> Radio Advertisemen</label>
+            <br>
+             <input type="radio" name="how_heard_3" id="choice-c" value="internet-advertisement">
+            <label for="choice-c">Internet Advertisement</label>
+            <br>
+            <input type="radio" name="how_heard_4" id="choice-d" value="other">
+            <label for="choice-d">Other</label>
+            <br>
+        </section>
+        <section>
+            <h3>
+               <label for="browser-preference">What browser are you using?</label>
+            </h3>
+
+            <select name="browser-preference" >
+                <option value="google-chrome">Google Chrome</option>
+                <option value="mozilla-firefox">Mozilla Firefox</option>
+                <option value="Safari">Safari</option>
+                <option value="Other">Other</option>
+            </select>
+        </section>
+<!--            <input name="the-answer" value="42" type="hidden">-->
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+
+</main>
+</body>
+</html>
