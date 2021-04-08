@@ -1,6 +1,44 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');*/
+body {
+    font-family: "Dela Gothic One", cursive;
+    color: white;
+    background-color: #f5f0e4;
+    background-image: url(https://i.pinimg.com/originals/af/8d/63/af8d63a477078732b79ff9d9fc60873f.jpg);
+}
+
 
 .fancy-header {
-    color: purple;
+    color: greenyellow;
+    text-decoration: underline;
 
 }
+ul {
+    list-style: square;
+}
+
+h1 {
+    text-align: center;
+    font-size: 200%;
+}
+a:link {
+    color:red;
+}
+a:visited {
+    color:yellow;
+}
+a:hover {
+    color:hotpink;
+}
+a:active {
+    color:green;
+}
+table tr td{
+    padding: 10px;
+    font-size: 90%;
+}
+p::first-letter {
+    font-size: 120%;
+}
+
+
 
