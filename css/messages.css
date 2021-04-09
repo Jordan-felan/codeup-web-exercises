@@ -5,3 +5,38 @@ body, html {
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
+.message-info {
+    padding: 10px;
+    margin: 1em;
+    background-color: lavender;
+    color: rebeccapurple;
+
+
+
+}
+.message-success {
+    padding: 10px;
+    margin: 1em;
+    background-color: greenyellow;
+    color: green;
+
+}
+.message-warning {
+    padding: 10px;
+    margin: 1em;
+    background-color: yellow;
+    color: gold;
+
+}
+.message-error {
+    padding: 10px;
+    margin: 1em;
+    background-color: pink;
+    color: hotpink;
+
+}
+div {
+    border-radius: 7px;
+
+}
+
