@@ -1,0 +1,22 @@
+.bg-pizza {
+    background-image: url(https://java.codeup.com/examples/bootstrap/pizza.png);
+    background-size: cover;
+}
+
+.opaque-bg {
+    background: rgba(350, 350, 350, 0.7);
+}
+.jumbotron {
+
+}
+h1 {
+    text-align: center;
+}
+a:active {
+    color: black;
+}
+.nav-link {
+    display: flex;
+    flex-direction: row;
+ ;
+}
