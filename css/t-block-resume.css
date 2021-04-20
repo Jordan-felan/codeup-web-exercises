@@ -1,0 +1,12 @@
+.no-style  {
+    list-style: none;
+}
+hr {
+  border:3px solid darkolivegreen;
+
+}
+@media (min-width: 992px) {
+    nav ul li {
+        background: transparent;
+    }
+}
