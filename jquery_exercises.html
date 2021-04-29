@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JQuery Exercises</title>
+</head>
+<body>
+<div id="div">
+<h1 id="id-selector">First Topic</h1>
+<h1 id="id-selector-3">Second Topic</h1>
+
+<p class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, asperiores commodi corporis error eveniet exercitationem hic id, impedit laudantium modi molestiae, nesciunt quibusdam reprehenderit repudiandae unde vel voluptatem. Amet, autem.</p>
+
+<h3 id="id-selector-1">Second Topic</h3>
+<p class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque exercitationem fuga laboriosam libero modi necessitatibus placeat praesentium quos recusandae tenetur! Consectetur dicta distinctio dolores excepturi maiores reiciendis saepe sed vel!</p>
+
+<h3 id="id-selector-2">Third Topic</h3>
+<ul class="">
+  <li id="list">pick me</li>
+  <li id="list-2">no pick me</li>
+  <li>just shut up and pick</li>
+</ul>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+
+<script>
+  // // $("h3, p").html("I've taken back my computer");
+  //
+  // $("#id-selector").each( function() {
+  //   alert($("#id-selector"));
+  // });
+
+  // $(".class-selector").css("font-family", "sans-serif");
+  //
+  // $("#div").css("color", "blue");
+  // $("#list").css("color", "green");
+  // $(".codeup").css({"border-color": "red",
+  //   "border-width":"1px",
+  //   "border-style":"solid"});
+  $("h1").each( function() {
+    alert($(this).html());
+  });
+  // var theContent = $("h1").html();
+  // alert(theContent);
+  $("li").css("font-size","20px");
+  $("h3, p, li").css("background-color", "yellow")
+
+
+</script>
+
+</body>
+</html>
