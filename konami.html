@@ -3,9 +3,15 @@
 <head>
   <title>Konami Code</title>
   <link rel="stylesheet" href="css/konami.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
 </head>
 <body>
-<h1>Konami Code</h1>
+<h1>Jonin Ninjas ONLY</h1>
+<h2>Jonin secret password required to enter.</h2>
+<h3>All others scram, especially Genin and Chunin!!!</h3>
+<h4>Only exception is Naruto!</h4>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <!--<script src="/js/jquery-3.6.0.min.js"></script>-->
 <script>
@@ -17,7 +23,7 @@
   var global = {
 
     konami: function() {
-      var konamikeys = [38,38,40,40,37,39,37,39,66,65],
+      var konamikeys = [38,38,40,40,37,39,37,39,66,65,13],
               started = false,
               count = 0;
 
@@ -46,12 +52,40 @@
             // Incorrect key, restart.
             reset();
           }
-          if (count == 10){
+          if (count == 11){
             // Success!
-            alert('Konami code entered! Do something cool here.');
+            $("html").css("background-image","url(https://media1.tenor.com/images/7817b33e58b0f97fcc3554dd860c66dc/tenor.gif)")
+            $("<audio></audio>").attr({
+              'src':'audio/naruto-theme.mp3',
+              'volume':0.01,
+              'autoplay':'autoplay'
+            }).appendTo("body");
+            $("h1, h2, h3, h4").css("color", "yellow");
+
+            $("h1").html("Welcome Fellow Jonin");
+            $("h2").html("Welcome to our club!");
+            $("h3").html("We only have 1 rule and 1 rule only. JONIN ONlY except for Naruto!!!!");
+            $("h4").html("We expect you to be a magnificent ninja!");
+            alert('Welcome Fellow Jonin!');
+
+
             reset();
           }
         } else {
+          $("html").css("background-image","url(https://www.interstellarrift.com/wiki/images/0/0d/Access_Denied.png)")
+          $("<audio></audio>").attr({
+            'src':'audio/Wrong-answer-sound-effect.mp3',
+            'volume':0.01,
+            'autoplay':'autoplay'
+          }).appendTo("body");
+
+          $("h1, h2, h3, h4").css("color", "black");
+          $("h1").html("Password entered is incorrect");
+          $("h2").html("If Jonin please try again!");
+          $("h3").html("If Genin or Chunin then SCRAM!");
+          $("h4").html("Except for Naruto we know you are forgetful!");
+
+          alert("Good try Genin and Chunin, youll never guess our password!!!");
           reset();
         }
       });

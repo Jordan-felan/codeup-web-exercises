@@ -1,3 +1,19 @@
 html {
-    background-image: "https://randomuser.me/api/portraits/men/12.jpg";
+    background-image: url("https://www.geekmi.news/__export/1609957751269/sites/debate/img/2021/01/06/jxnin_crop1609957711124.jpg_346753400.jpg");
+    color: white;
+    text-align: center;
+
+}
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+h2 {
+    font-size: 45px;
+}
+h3 {
+    font-size: 35px;
+}
+h4 {
+    font-size: 30px;
 }
