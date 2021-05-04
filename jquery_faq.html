@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10 FAQs about Yellowstone!</title>
+    <link rel="stylesheet" href="css/jquery_faq.css">
+</head>
+<body>
+<p>10 FAQs about Yellowstone!:</p>
+<br>
+<!--<button id="show-answers">Show Answers</button>-->
+
+<dl>
+  <dt class="highlight">Where do I Make Reservations to Stay in Yellowstone?</dt>
+  <dd class="invisible">Yellowstone National Park Lodges operates the nine lodges in the park. All are open from late spring through fall, but only two are open in the winter: Old Faithful Snow Lodge and Mammoth Hot Springs Hotel. Be sure to make a reservation early!</dd>
+<br>
+  <dt class="highlight">Where can I see Animals?</dt>
+  <dd class="invisible">Check at visitor centers for information about recent sightings.</dd>
+<br>
+  <dt class="highlight">How did Yellowstone get its name?</dt>
+  <dd class="invisible">Yellowstone National Park is named after the Yellowstone River, the major river running through the park. According to French-Canadian trappers in the 1800s, they asked the name of the river from the Minnetaree tribe, who live in what is now eastern Montana. They responded “Mi tse a-da-zi,” which literally translates as “Rock Yellow River.” The trappers translated this into French as “Roche Jaune” or “Pierre Jaune.” In 1797, explorer-geographer David Thompson used the English translation—“Yellow Stone.” Lewis and Clark called the Yellowstone River by the French and English forms. Subsequent use formalized the name as “Yellowstone.</dd>
+<br>
+    <dt class="highlight">Is Yellowstone the largest national park?</dt>
+    <dd class="invisible">No. More than half of Alaska’s national park units are larger, including Wrangell–St. Elias National Park and Preserve, which is the largest unit (13 million acres) in the National Park System. Until 1994, Yellowstone (at 2.2 million acres) was the largest national park in the contiguous United States. That year Death Valley National Monument was expanded and became a national park—it has more than 3 million acres.</dd>
+    <br>
+    <dt class="highlight">Is Yellowstone the most visited national park?</dt>
+    <dd class="invisible">Yellowstone is in the top five national parks for number of recreational visitors. Great Smoky Mountains National Park often has the most. Visit https://irma.nps.gov/Stats/ to view up-to-date statistics for all national parks.</dd>
+    <br>
+    <dt class="highlight">How many rangers work in Yellowstone?</dt>
+    <dd class="invisible">Approximately 738 people work for the National Park Service during the peak summer season. Approximately 386 are permanent, year-round employees. Park rangers work in education, resource management, law enforcement, emergency medical services, and backcountry operations. Other employees specialize in research, maintenance, management, administration, trail maintenance, fire management, and fee collection.</dd>
+    <br>
+    <dt class="highlight">Can we swim in rivers and lakes?</dt>
+    <dd class="invisible">Swimming is not recommended because most lakes and streams are dangerously cold. Firehole Canyon, near Madison Junction, has a swimming area popular in summer. Soaking in thermal features is illegal. The area known as the Boiling River, north of Mammoth Hot Springs, allows soaking in the Gardner River near thermal outflow, but not in the feature itself. Soaking is allowed during daylight hours only and at your own risk.</dd>
+    <br>
+    <dt class="highlight">What is the highest peak in the park?</dt>
+    <dd class="invisible">Eagle Peak in the southeastern part of Yellowstone is the highest at 11,358 feet.</dd>
+    <br>
+    <dt class="highlight">Why is Yellowstone called a biosphere reserve and a world heritage site?</dt>
+    <dd class="invisible">The United Nations designated Yellowstone National Park as a biosphere reserve and a world heritage site in recognition of the worldwide significance of its natural and cultural resources.</dd>
+    <br>
+    <dt class="highlight">How did Mt. Washburn form?</dt>
+    <dd class="invisible">At 10,243 feet, this peak can be seen from many locations in the park. It is a remnant of an extinct volcano from the Absaroka Volcanics of about 50 million years ago. The volcano was literally cut in half by a volcanic eruption 640,000 years ago. Only the northern part of the original volcano is still visible.</dd>
+
+</dl>
+<p><a href="#">Show and Hide Answers</a></p>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+    "use strict";
+    // how to use with button
+    // $("#show-answers").click(function(){
+    //     var currentVisibility = $("dd").css("visibility");
+    //     // alert(currentVisibility);
+    //     if (currentVisibility === "hidden") {
+    //         $("dd").css("visibility", "visible");
+    //     } else {
+    //         $("dd").css("visibility", "hidden");
+    //     }
+    // });
+    $(".highlight").click(function(){
+        var currentBackground = $(this).css("background-color");
+        // alert(currentBackground);
+        if (currentBackground === "rgba(0, 0, 0, 0)") {
+            $(this).css("background-color","hotpink")
+        } else {
+            $(this).css("background-color","rgba(0, 0, 0, 0)")
+            console.log("hello")
+        }
+    });
+    // $("dt").click(function() {
+    //     $(this).toggleClass("highlightOne");
+    //
+    // });
+
+    $("a").click(function() {
+        $("dd").toggleClass("invisible")
+    })
+
+
+
+</script>
+</body>
+</html>
