@@ -174,26 +174,22 @@
 
     //Traversing code
 
-    $("h3").click(function(){
+    $("h3").click(function () {
         $(this).next().first().css("font-weight", "bold");
     });
     // $('h3').click(function () {
     //     $(this).next().children().css('font-weight', 'bold');
     // })
 
-    $('#highlight-last').click(function(event) {
-        $('ul li:last-child').each(function(index) {
+    $('#highlight-last').click(function (event) {
+        $('ul li:last-child').each(function (index) {
             $(this).css('background-color', '#FF0');
         });
     });
-    $('ul').click(function (){
+    $('ul').click(function () {
         $(this).children().first().css('color', 'blue');
 
     });
-
-
-
-
 
 
 </script>
