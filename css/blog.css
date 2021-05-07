@@ -1,0 +1,6 @@
+.gradient {
+    background-image: linear-gradient(to bottom right,black, grey)
+}
+.blog-content {
+    display: none;
+}
