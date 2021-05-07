@@ -48,6 +48,15 @@
         "outdoor"
     ],
     "price": 325
+}, {
+    "title": "Polesaw",
+    "quantity": 4,
+    "categories": [
+        "tool",
+        "gas",
+        "outdoor"
+    ],
+    "price": 325
 }
 ]
 
