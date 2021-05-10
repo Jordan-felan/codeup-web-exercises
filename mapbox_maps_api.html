@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MAPBOX Exercise</title>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+<div id='map' style='width: 400px; height: 300px;'></div>
+
+
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder.js"></script>
+<!--<script src="js/mapbox_maps_api.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+<script>
+    mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
+    var map = new mapboxgl.Map({
+        container: 'map', // container ID
+
+    });
+    //map
+
+    map.setStyle("mapbox://styles/mapbox/dark-v10")
+    map.setZoom(8)
+    map.setCenter([-98.4916, 29.4252])
+
+    //markers
+
+
+
+    var markerGogi = new mapboxgl.Marker({
+        color:"red",
+    })
+        .setLngLat([-98.50641, 29.52258])
+        .setDraggable(false)
+        .addTo(map);
+
+
+    //Popups
+    var popup = new mapboxgl.Popup()
+        .setLngLat(markerGogi.getLngLat())
+        .setHTML("<h3>Wild Gogi</h3>")
+
+    $(markerGogi).click(function(){
+        popup.addTo(map);
+    })
+    markerGogi.setPopup(popup);
+
+    // info array of info
+    var faveSpots = [
+        {name: "Wild Gogi", location:"7115 Blanco Rd #110, San Antonio, TX 78216"},
+        {name: "Fish City Grill", location:"7010 W Loop 1604 N Suite 111, San Antonio, TX 78254"},
+        {name: "Hanzo", location:"7701 Broadway, San Antonio, TX 78209"},
+    ]
+
+
+    faveSpots.forEach(function(restaurant) {
+        geocode(restaurant.location, MAPBOX_ACCESS_TOKEN).then(function(position) {
+            var popup = new mapboxgl.Popup()
+                .setHTML('<h3>' + restaurant.name + '</h3>');
+            var marker = new mapboxgl.Marker()
+                .setLngLat(position)
+                .addTo(map)
+                .setPopup(popup);
+        });
+    });
+
+
+
+
+
+
+</script>
+</body>
+</html>
