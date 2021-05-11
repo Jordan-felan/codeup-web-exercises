@@ -49,6 +49,7 @@ var search = document.getElementById("search-city");
 var token = MAPBOX_ACCESS_TOKEN
 var submitButton = document.querySelector("#submitSearch");
 submitButton.addEventListener("click", searchCity);
+//flag variable
 var searchResult = false;
 function searchCity () {
     geocode(search.value, token).then(function (results) {
@@ -58,7 +59,7 @@ function searchCity () {
         var long = results.features[0].center[0]
         renderDailyWeather(lat,long)
         marker.setLngLat([long,lat])
-        map.flyTo({center: [long,lat], zoom: 12})
+        map.flyTo({center: [long,lat], zoom: 9})
     })
 
 
@@ -74,7 +75,7 @@ function renderDailyWeather (lat,long){
         lat: lat,
         lon: long,
         units: "imperial",
-        exclude: "current,hourly,minutely"
+        exclude: "hourly,minutely"
     })
         .done(function (data) {
 
@@ -85,13 +86,15 @@ function renderDailyWeather (lat,long){
                 var html = '';
                 var today = (data).daily[i];
                 var todayDate = new Date(today.dt * 1000);
-                html = '<div class="card col-3">';
-                html += '<div class="card-header bg-light text-dark text-center">' + todayDate + '</div>';
-                html += '<div class="text-center">';
+                html = '<div class="card bg-dark col-3">';
+                html += '<div class="card-header text-light text-center">' + todayDate + '</div>';
+                html += '<div class="text-center text-light">';
                 html += '<div class="description">' + data.daily[i].weather[0].description + '</div>';
-                html += '<div class="temp">' + 'Temp:' + Math.round(parseFloat(data.daily[i].temp.day)) + '&deg' +  '</div>';
-                html += '<div class="humidity">' + "humidity:" + Math.round(parseFloat(data.daily[i].humidity)) + '</div>';
+                html += '<div class="temp">' + 'High:' + Math.round(parseFloat(data.daily[i].temp.max)) + '&deg' +  '</div>';
+                html += '<div class="temp">' + 'Low:' + Math.round(parseFloat(data.daily[i].temp.min)) + '&deg' +  '</div>';
+                html += '<div class="humidity">' + "Humidity:" + Math.round(parseFloat(data.daily[i].humidity)) + '</div>';
                 html += '</div></div>'
+                // using flag variable to either use base location and append its weather, or if search is triggered will append new weather info
                 if(!searchResult){
                     $('#weather').append(html);
                 } else {
