@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open Weather API Playground</title>
+</head>
+<body>
+<h1>Open the console!</h1>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="js/keys.js"></script>
+<script>
+  var coordinates = [35.7143, -83.5102]
+  $.get("https://api.openweathermap.org/data/2.5/onecall?units=imperial&lat=" + coordinates[0] + "&lon=" + coordinates[1] + "&exclude=current,hourly,minutely&appid=" + WEATHER_MAP_TOKEN)
+          .done(function (resp) {
+            console.log(resp);
+            var today = resp.daily[0];
+            var todayDate = new Date(today.dt * 1000);
+            console.log(todayDate);
+          });
+
+
+  // $.get("http://api.openweathermap.org/data/2.5/onecall/timemachine?lat=60.99&lon=30.9&appid=" + WEATHER_MAP_TOKEN)
+</script>
+
+
+
+</body>
+</html>
