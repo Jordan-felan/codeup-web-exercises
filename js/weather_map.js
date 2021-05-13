@@ -14,7 +14,7 @@ map.addControl(new mapboxgl.NavigationControl())
 
 
 
-
+//marker set up and move
 var marker = new mapboxgl.Marker({
     color:"red",
 })
@@ -58,6 +58,8 @@ function searchCity () {
         marker.setLngLat([long,lat]);
         map.flyTo({center: [long,lat], zoom: 9,speed:0.8});
     })
+
+    //reverse geo code
     // function reverseGeo(lat,long) {
     //     $.get("http://api.openweathermap.org/geo/1.0/reverse?lat=" + lat + "&lon=" + long + "&limit=" + 5 + "&appid=" + OPEN_WEATHER_APPID)
     //         .done(function (data) {
@@ -82,7 +84,7 @@ function renderDailyWeather (lat,long){
         lat: lat,
         lon: long,
         units: "imperial",
-        exclude: "current,hourly,minutely"
+        exclude: "hourly,minutely"
     })
         .done(function (data) {
 
@@ -97,7 +99,7 @@ function renderDailyWeather (lat,long){
                 var todayDate = new Date(today.dt * 1000);
                 html = '<div class="card bg-secondary col-3 heading-footer">';
                 html += '<div class="card-header w-100 text-dark text-center ">' + todayDate + '</div>';
-                html += '<div class="text-center text-light">';
+                html += '<div class="text-center text-danger">';
                 html += "<img src='" + "http://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon +"@2x.png'>"
                 html += '<div class="description">' + data.daily[i].weather[0].description + '</div>';
                 html += '<div class="temp">' + 'High:' + Math.round(parseFloat(data.daily[i].temp.max)) + '&deg' +  '</div>';
