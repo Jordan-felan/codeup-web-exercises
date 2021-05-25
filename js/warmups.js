@@ -1,3 +1,5 @@
+
+//FIZZBUZZ FUNCTION
 function fizzBuzz(num) {
     for (let i = 1; i < num; i++) {
         if (i % 15 === 0) {
@@ -16,3 +18,10 @@ function fizzBuzz(num) {
     ;
 };
 console.log(fizzBuzz(100))
+
+//RETURN 7 FUNCTION
+function returnSeven (num) {
+    return 7
+}
+
+console.log(returnSeven(1));
