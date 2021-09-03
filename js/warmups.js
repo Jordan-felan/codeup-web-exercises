@@ -28,4 +28,4 @@ console.log(returnSeven(1));
 
 const timesFive = num => typeof num ==="number" ? num * 5 : 0;
 
-console.log(timesFive("hello world"));
+console.log(timesFive("hello"));
